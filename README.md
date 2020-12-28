@@ -1,1 +1,0 @@
-# nsyu-personal-project
