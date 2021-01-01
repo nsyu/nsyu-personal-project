@@ -22,6 +22,29 @@
         <li><a href="javascript:chkAddress('서울시 송파구 잠실동 207번지')">3화. 김치찌개 - 탕</a></li>
         <li><a href="javascript:chkAddress('강원도 속초시 영랑동 148-171')">4화. 생선회 - 삼해횟집</a></li>
         <li><a href="javascript:chkAddress('강원도 속초시 동명동 513-98')">4화. 생선구이 - 동명항 생선숯불구이</a></li>
+        <li><a href="javascript:chkAddress('서울시 종로구 삼청동 124-2')">5화. 소고기구이 - 만정</a></li>
+        <li><a href="javascript:chkAddress('서울시 중구 북창동 104')">5화. 샤브샤브 - 오후정</a></li>
+        <li><a href="javascript:chkAddress('서울시 서초구 양재동 2-13')">6화. 나물비빔밥 - 산채전문점</a></li>
+        <li><a href="javascript:chkAddress('서울시 강서구 방화1동 451-8')">6화. 쭈꾸미 - 쭈꾸미마을</a></li>
+        <li><a href="javascript:chkAddress('서울시 송파구 송파대로36길 5-13')">7화. 즉석떡볶이 - 가나안</a></li>
+        <li><a href="javascript:chkAddress('경기도 안양시 동안구 관양2동 1487-28')">7화. 돈가스 - 에버그린</a></li>
+        <li><a href="javascript:chkAddress('경기도 화성시 동탄면 장지리 782-6')">8화. 알탕 - 신동태</a></li>
+        <li><a href="javascript:chkAddress('서울시 마포구 서교동 358-136')">8화. 소곱창구이 - 강수곱창</a></li>
+        <li><a href="javascript:chkAddress('서울시 마포구 대흥동 337-62')">9화. 고등어김치찜 - 군자네</a></li>
+        <li><a href="javascript:chkAddress('경기도 고양시 일산동구 백석동 1247-6')">9화. 삼겹살 - 싹쓰리 솥뚜껑</a></li>
+        <li><a href="javascript:chkAddress('서울시 영등포구 당산동6가 237-42')">10화. 갈비탕 - 농실가</a></li>
+        <li><a href="javascript:chkAddress('경기도 고양시 일산동구 백석동 1448-9')">10화. 게장 - 명가진가</a></li>
+        <li><a href="javascript:chkAddress('서울시 도봉구 방학동 677-20')">11화. 짬뽕 - 방학사거리 짬뽕집</a></li>
+        <li><a href="javascript:chkAddress('서울시 마포구 서교동 358-118')">11화. 스테이크 - 뉴욕뉴욕</a></li>
+        <li><a href="javascript:chkAddress('서울시 강남구 역삼동 641-18')">12화. 부대찌개 - 대우식당</a></li>
+        <li><a href="javascript:chkAddress('경기도 용인시 기흥구 보정동 1184-4')">12화. 참치회 - 한참치</a></li>
+        <li><a href="javascript:chkAddress('경기도 남양주시 조안면 삼봉리 276-3')">13화. 수제비 - 더 수제비</a></li>
+        <li><a href="javascript:chkAddress('서울시 강서구 가양1동 1444-4')">13화 아귀찜 - 똑순이 아구찜</a></li>
+        <li><a href="javascript:chkAddress('서울시 종로구 적선동 27')">14화. 족발 - 경원집</a></li>
+        <li><a href="javascript:chkAddress('서울시 서대문구 연희동 193-6')">14화. 냉면 - 청송함흥냉면</a></li>
+        <li><a href="javascript:chkAddress('전라북도 전주시 완산구 전동 3가 2-198')">15화. 피순대 - 조점례 남문피순대</a></li>
+        <li><a href="javascript:chkAddress('전라북도 전주시 완산구 풍남동 3가 74-25')">15화. 치즈 - 치즈명가</a></li>
+        <li><a href="javascript:chkAddress('')"></a></li>
         <li><a href="javascript:chkAddress('')"></a></li>
         <li><a href="javascript:chkAddress('')"></a></li>
         <li><a href="#">...</a></li>
@@ -54,6 +77,11 @@
     .select-box{
         margin:10px 0px 10px 10px;
     }
+
+    .dropdown-menu {
+      max-height:80vh;
+      overflow:auto; 
+    }
 </style>
 <script>
 function chkAddress(addr) {
@@ -64,9 +92,6 @@ function chkAddress(addr) {
         }
 
         console.log(response);
-        console.log(response.v2.addresses[0].x);
-        console.log(response.v2.addresses[0].y);
-
         var x = response.v2.addresses[0].x;
         var y = response.v2.addresses[0].y;
 
